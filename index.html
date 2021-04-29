@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C files</title>
+</head>
+
+<body>
+    <h1>Array</h1>
+    <p>
+    <pre>
+        //2D array addition
+        #include <stdio.h>
+            void main()
+            {
+                int a[2][2], b[2][2];
+                printf("enter the first matrix(2*2)\n");
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        scanf("%d", &a[i][j]);
+                    }
+                }
+                printf("enter the second matrix(2*2)\n");
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        scanf("%d", &b[i][j]);
+                    }
+                }
+                printf("sum of matrix is :\n");
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        printf("%d ", a[i][j] + b[i][j]);
+                    }
+                    printf("\n");
+                }
+            }
+            //2D array printing
+            #include <stdio.h>
+            void main()
+            {
+                int m, n;
+                printf("enter the number of collums & rows\n");
+                scanf("%d %d", &n, &m);
+                int arr[n][m];
+                printf("enter an elements of matrix\n");
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < m; j++)
+                    {
+                        scanf("%d", &arr[i][j]);
+                    }
+                }
+                printf("entered matrix is\n");
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < m; j++)
+                    {
+                        printf("%d ", arr[i][j]);
+                    }
+                    printf("\n");
+                }
+            }
+            
+            //with argue with return type
+            #include <stdio.h>
+            int sum(int a, int b)
+            {
+                return a + b;
+            }
+            void main()
+            {
+                int a, b;
+                printf("enter a&b\n");
+                scanf("%d %d", &a, &b);
+                printf("%d", sum(a, b));
+            }
+            
+           // with argue without return type
+            #include <stdio.h>
+            
+            void swap(int a, int b)
+            {
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                printf("a=%d , b=%d", a, b);
+            }
+            void main()
+            {
+                int a, b;
+                printf("enter the value of a & b\n");
+                scanf("%d %d", &a, &b);
+                swap(a, b);
+            }
+            
+            //without argue without return type
+            #include <stdio.h>
+            void multi()
+            {
+                int a = 8, b = 7;
+                printf("multiplication is %d", a * b);
+            }
+            void main()
+            {
+                multi();
+            }
+            
+            //without argue with return type
+            
+            #include <stdio.h>
+            int fact()
+            {
+                int a, i = 1;
+                scanf("%d", &a);
+                while (a != 0)
+                {
+                    i *= a;
+                    a--;
+                }
+            
+                return i;
+            }
+            void main()
+            {
+                printf("%d", fact());
+            }
+            
+            
+    </pre>
+    </p>
+</body>
+
+</html>
