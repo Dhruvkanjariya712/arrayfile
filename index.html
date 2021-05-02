@@ -134,6 +134,21 @@
                 printf("%d", fact());
             }
             
+
+            //pointer
+
+            #include <stdio.h>
+                void main()
+                {
+                   int a, b, *ptr1, *ptr2;
+                   printf("enter two numbers\n");
+                   scanf("%d %d", &a, &b);
+                   printf("entered numbers are %d and %d\n", a, b);
+                   ptr1 = &a;
+                   ptr2 = &b;
+                   printf("adress of a is %x and that of is b is %x\n", ptr1, ptr2);
+                   printf("sum of %d and %d is %d\n", a, b, *ptr1 + *ptr2);
+                }
             
     </pre>
     </p>
