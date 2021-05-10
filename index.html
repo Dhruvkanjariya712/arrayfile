@@ -309,7 +309,43 @@
                 }
             </p>
         </pre>
+        <h1 style="color: darkgoldenrod;">Pointers in array</h1>
+            <pre>
+                <p style="color: darkorange;">
+                    //array without using pointer
 
+                    #include <stdio.h>
+                    void main()
+                    {
+                        int a[3] = {1, 2, 3};
+                        int *p = a;
+                    
+                        for (int i = 0; i < 3; i++)
+                        {
+                            printf("%d\n", *p);
+                    
+                            p++;
+                        }
+                    }
+                    
+                    //array using pointer
+                    
+                    #include <stdio.h>
+                    void main()
+                    {
+                        int var[] = {10, 100, 200};
+                        int i, max = 3;
+                        int *ptr[max];
+                        
+                        for (int i = 0; i < max; i++)
+                        {
+                            ptr[i] = &var[i];
+                            //printf("%d\n", *ptr[i]);
+                            printf("%d\n", ptr[i]);
+                        }
+                    }
+                </p>
+            </pre>
 </body>
 
 </html>
