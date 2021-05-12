@@ -309,7 +309,7 @@
                 }
             </p>
         </pre>
-        <h1 style="color: darkgoldenrod;">Pointers in array</h1>
+        <h1 style="color: darkgoldenrod;">Pointers in array & function</h1>
             <pre>
                 <p style="color: darkorange;">
                     //array without using pointer
@@ -344,6 +344,46 @@
                             printf("%d\n", ptr[i]);
                         }
                     }
+
+                    //function with pointer and array
+
+                    #include <stdio.h>
+                    int foo(int *p, int size);
+                    void main()
+                    {
+                        int p[] = {1, 2, 3, 4, 5};
+                        printf("%d", foo(p, 5));
+                    }
+                    int foo(int *p, int size)
+                    {
+                        int c = 0;
+                        for (int i = 0; i < size; i++)
+                        {
+                            c += *p;
+                            p++;
+                        }
+                        return c;
+                    }
+                    
+                    //function with pointer and array
+                    
+                    #include <stdio.h>
+                    int tab[5] = {1, 2, 3, 4, 5};
+                    int *build_array()
+                    {
+                        return tab;
+                    }
+                    int main()
+                    {
+                        int *a;
+                        a = build_array();
+                        for (int i = 0; i < 5; i++)
+                        {
+                            printf("%d\n", a[i]);
+                        }
+                        return 0;
+                    }
+                    
                 </p>
             </pre>
 </body>
