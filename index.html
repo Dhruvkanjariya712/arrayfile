@@ -45,7 +45,7 @@
                     printf("\n");
                 }
             }
-            
+            --------------------------------------------------------
             //2D array printing
             
             #include <stdio.h>
@@ -73,7 +73,7 @@
                     printf("\n");
                 }
             }
-            
+            --------------------------------------------------------
             //With argue with return type
             
             #include <stdio.h>
@@ -88,7 +88,7 @@
                 scanf("%d %d", &a, &b);
                 printf("%d", sum(a, b));
             }
-            
+            --------------------------------------------------------
             //With argue without return type
            
             #include <stdio.h>
@@ -106,7 +106,8 @@
                 scanf("%d %d", &a, &b);
                 swap(a, b);
             }
-            
+
+            --------------------------------------------------------
             //Without argue without return type
             
             #include <stdio.h>
@@ -119,7 +120,8 @@
             {
                 multi();
             }
-            
+
+            --------------------------------------------------------
             //Without argue with return type
             
             #include <stdio.h>
@@ -157,6 +159,7 @@
                        printf("adress of a is %x and that of is b is %x\n", ptr1, ptr2);
                        printf("sum of %d and %d is %d\n", a, b, *ptr1 + *ptr2);
                     }
+                --------------------------------------------------------
             </p>
         </pre>
     <h1 style="color: darkgoldenrod;">Call by value & Call by reference</h1>
@@ -178,6 +181,8 @@
                         change(a);
                         printf("after function call a=%d\n", a);
                         }
+
+                    --------------------------------------------------------
             
                     //call by value(swaping of two numbers)
             
@@ -196,7 +201,8 @@
                         scanf("%d %d", &a, &b);
                         swap(a, b);
                         }
-        
+
+                    --------------------------------------------------------
                     //call by reference
         
                     #include <stdio.h>
@@ -213,7 +219,8 @@
                         change(&a);
                         printf("after function call a=%d\n", a);
                         }
-        
+
+                    --------------------------------------------------------
                     //call by reference(swaping of two numbers)
         
                     #include <stdio.h>
@@ -232,6 +239,7 @@
                         scanf("%d %d", &a, &b);
                         swap(&a, &b);
                         }
+                    --------------------------------------------------------
                     </p>
         </pre>
     <h1 style="color: darkgoldenrod;">Recursive function</h1>
@@ -258,7 +266,8 @@
                     scanf("%d", &a);
                     printf("Addition of 0 to %d is %d", a, add(a));
                 }
-                
+
+            --------------------------------------------------------
                 //factorial in recursion
                 
                 #include <stdio.h>
@@ -280,7 +289,8 @@
                     scanf("%d", &a);
                     printf("factorial of  %d is %d", a, add(a));
                 }
-                
+
+            --------------------------------------------------------    
                 //fibonaci with recurtion
                 
                 #include <stdio.h>
@@ -307,6 +317,7 @@
                     scanf("%d", &a);
                     printf("%d", add(a));
                 }
+            --------------------------------------------------------
             </p>
         </pre>
     <h1 style="color: darkgoldenrod;">Pointers in array & function</h1>
@@ -327,7 +338,8 @@
                             p++;
                         }
                     }
-                    
+
+                --------------------------------------------------------   
                     //array using pointer
                     
                     #include <stdio.h>
@@ -345,8 +357,9 @@
                         }
                     }
 
+                --------------------------------------------------------
                     //function with pointer and array
-
+                
                     #include <stdio.h>
                     int foo(int *p, int size);
                     void main()
@@ -383,7 +396,7 @@
                         }
                         return 0;
                     }
-                    
+                --------------------------------------------------------  
                 </p>
             </pre>
     <h1 style="color:darkgoldenrod;">Structure</h1>
@@ -391,7 +404,7 @@
         <p style="color: crimson;">
             //structure
 
-            #include <stdio.h>
+            #include<stdio.h>
             struct student
             {
                 char name[20];
@@ -409,8 +422,8 @@
                 printf("gender = %c\n", s1.gender);
                 printf("phone no = %d\n", s1.phone_no);
             }
-            
-            //Array of structure
+            --------------------------------------------------------
+            // 1..Array of structure
             
             #include <stdio.h>
             struct student
@@ -437,8 +450,128 @@
                     printf("your phone number is : %d\n", s1[i].phone_no);
                 }
             }
-            
+            --------------------------------------------------------
+            // 2..Array of structure
+
+                #include<stdio.h>
+                #include<string.h>
+                #define MAX 2
+                
+                struct student
+                {
+                    char name[20];
+                    int roll_no;
+                    float marks;
+                };
+                
+                int main()
+                {
+                    struct student arr_student[MAX];
+                    int i;
+                
+                    for(i = 0; i < MAX; i++ )
+                    {
+                        printf("\nEnter details of student %d\n\n", i+1);
+                
+                        printf("Enter name: ");
+                        scanf("%s", arr_student[i].name);
+                
+                        printf("Enter roll no: ");
+                        scanf("%d", &arr_student[i].roll_no);
+                
+                        printf("Enter marks: ");
+                        scanf("%f", &arr_student[i].marks);
+                    }
+                
+                    printf("\n");
+                
+                    printf("Name\tRoll no\tMarks\n");
+                
+                    for(i = 0; i < MAX; i++ )
+                    {
+                        printf("%s\t%d\t%.2f\n",
+                        arr_student[i].name, arr_student[i].roll_no, arr_student[i].marks);
+                    }
+                
+                    return 0;
+                }
+                --------------------------------------------------------
+                // 3..Array of structure
+
+                #include 
+                #include 
+                struct student{
+                   int id;
+                   char name[30];
+                   float percentage;
+                };
+                int main(){
+                   int i;
+                   struct student record[2];
+                   // 1st student's record
+                   record[0].id=1;
+                   strcpy(record[0].name, "Bhanu");
+                   record[0].percentage = 86.5;
+                   // 2nd student's record
+                   record[1].id=2;
+                   strcpy(record[1].name, "Priya");
+                   record[1].percentage = 90.5;
+                   // 3rd student's record
+                   record[2].id=3;
+                   strcpy(record[2].name, "Hari");
+                   record[2].percentage = 81.5;
+                   for(i=0; i< 3; i++)
+                   {
+                    printf("Records of STUDENT : %d \n", i+1);
+                    printf("Id is: %d \n", record[i].id);
+                    printf("Name is: %s \n", record[i].name);
+                    printf("Percentage is: %f\n\n",record[i].percentage);
+                   }
+                   return 0;
+                }
+                --------------------------------------------------------
         </p>
+    </pre>
+    <h1 style="color: darkgoldenrod;">Pointers to structure</h1>
+    <pre>
+            #include<stdio.h>
+            struct student{
+               int sno;
+               char sname[30];
+               float marks;
+            };
+            int main (){
+               struct student s;
+               struct student *st;
+               printf("enter sno, sname, marks:");
+               scanf ("%d%s%f", & s.sno, s.sname, &s. marks);
+               st = &s;
+               printf ("details of the student are");
+               printf ("Number = %d\n", st ->sno);                                 
+               printf ("name = %s\n", st->sname);
+               printf ("marks =%f\n", st ->marks);
+               return 0;
+            }
+            
+            --------------------------------------------------------
+
+            #include<stdio.h>
+            struct person{
+               int age;
+               float weight;
+            };
+            int main(){
+               struct person *personPtr, person1;
+               personPtr = &person1;
+               printf("Enter age: ");
+               scanf("%d", &personPtr->age);
+               printf("Enter weight: ");
+               scanf("%f", &personPtr->weight);
+               printf("Displaying:\n");
+               printf("Age: %d\n", personPtr->age);
+               printf("weight: %f", personPtr->weight);
+               return 0;
+            }
     </pre>
 </body>
 
