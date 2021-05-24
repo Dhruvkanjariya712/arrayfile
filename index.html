@@ -572,6 +572,82 @@
                printf("weight: %f", personPtr->weight);
                return 0;
             }
+
+            --------------------------------------------------------
+            //Write a program to store information of books (id,name,title and subject) using function with structure.
+
+                #include <stdio.h>
+                struct books
+                {
+                    char t[20], n[20], s[20];
+                    int b, i, j;
+                };
+                void book(struct books st);
+                void main()
+                {
+                    struct books st;
+                    printf("Enter the Book Title:");
+                    scanf("%s", &st.t);
+                    printf("Enter the Book Name:");
+                    scanf("%s", &st.n);
+                    printf("Enter the Book Subject:");
+                    scanf("%s", &st.s);
+                    printf("Enter the Book Id:");
+                    scanf("%d", &st.i);
+                    book(st);
+                }
+                void book(struct books st)
+                {
+                    printf("book title : %s\n", st.t);
+                    printf("book name : %s\n", st.n);
+                    printf("book subject : %s\n", st.s);
+                    printf("book id : %d\n", st.i);
+                }
+
+                --------------------------------------------------------
+
+        //Write a program to store information of student (id, name and five subject marks) using structure.
+        // find the sum and total of a given five subjects.
+                    
+                    #include <stdio.h>
+                    struct stuinfo
+                    {
+                        char name[20];
+                        int id;
+                        int maths, cs, es, cp, ss;
+                    } s;
+                    
+                    void data(struct stuinfo s)
+                    {
+                        printf("Your name is : %s\n", s.name);
+                        printf("Your id is : %d\n", s.id);
+                        printf("Your maths marks : %d\n", s.maths);
+                        printf("Your cs marks : %d\n", s.cs);
+                        printf("Your es marks : %d\n", s.es);
+                        printf("Your cp marks : %d\n", s.cp);
+                        printf("Your ss marks : %d\n", s.ss);
+                    }
+                    
+                    void main()
+                    {
+                        printf("enter your name :");
+                        scanf("%s", &s.name);
+                        printf("enter your id :");
+                        scanf("%d", &s.id);
+                        printf("enter your maths marks :");
+                        scanf("%d", &s.maths);
+                        printf("enter your cs marks :");
+                        scanf("%d", &s.cs);
+                        printf("enter your es marks :");
+                        scanf("%d", &s.es);
+                        printf("enter your cp marks :");
+                        scanf("%d", &s.cp);
+                        printf("enter your ss marks :");
+                        scanf("%d", &s.ss);
+                        data(s);
+                    }
+                
+                
     </pre>
 </body>
 
